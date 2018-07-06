@@ -1,0 +1,45 @@
+<!-- En una página con muchas imágenes mostrar una alerta cuando esté
+cargado el DOM y otra después que las imágenes se hayan cargado.
+
+Tip: Investigar el evento window.onload
+
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+   
+<style>
+	.templo {
+		height: 500px;
+		width: 500px;
+	}
+</style> 
+
+    <title></title>
+  </head>
+  <body>
+  	<img class="templo" src="imagen/1.jpg">
+  	<img class="templo" src="imagen/2.jpg">
+  	<img class="templo" src="imagen/3.jpg">
+  	<img class="templo" src="imagen/4.jpg">
+  	<img class="templo" src="imagen/5.jpg">
+  	<img class="templo" src="imagen/6.jpg">
+  	<img class="templo" src="imagen/7.jpg">
+  	<img class="templo" src="imagen/8.jpg">
+  	<img class="templo" src="imagen/9.jpg">
+  	<img class="templo" src="imagen/10.jpg">
+ <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<script>
+	$( document ).ready()
+	{
+		alert("paciencia se esta cargando");
+	}
+
+	$( window ).on("load",function() {
+  		alert("ya esta cargado");
+	});
+</script>
+  </body>
+</html>
